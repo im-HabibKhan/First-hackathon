@@ -1,0 +1,23 @@
+{
+  "name": "food-delivery-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TKAkhter/saylani-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TKAkhter/saylani-hackathon/issues"
+  },
+  "homepage": "https://github.com/TKAkhter/saylani-hackathon#readme",
+  "dependencies": {
+    "firebase": "^8.10.0",
+    "firebase-admin": "^9.11.1"
+  }
+}
