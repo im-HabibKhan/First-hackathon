@@ -28,8 +28,6 @@
     to avoid connecting the SDK to running emulators.
   -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-
     <!-- Custom fonts for this template-->
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
     <link
@@ -39,9 +37,10 @@
     <!-- Custom styles for this template-->
     <link href="./assets/css/sb-admin-2.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
-<body id="page-top" onload="getCurrentUser()">
+<body id="page-top" onload="getOrders()">
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
@@ -57,7 +56,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">HABIB_APP Admin <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -398,8 +397,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="detail">Talha
-                                    Akhter</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="detail">Habib-Ur-Rehman</span>
                                 <img class="img-profile rounded-circle" src="./assets/img/undraw_profile.svg" />
                             </a>
                             <!-- Dropdown - User Information -->
@@ -432,16 +430,49 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- 404 Error Text -->
-                    <div class="text-center">
-                        <div class="error mx-auto" data-text="404">404</div>
-                        <p class="lead text-gray-800 mb-5">Page Not Found</p>
-                        <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-                        <a href="index.html">&larr; Back to Dashboard</a>
+                <div class="mcq-container container-fluid">
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Orders</h1>
                     </div>
 
+                    <!-- Content Row -->
+                    <div id="main">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered dataTableOrder" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Delivery Type</th>
+                                                <th>Name</th>
+                                                <th>Price (Rs.)</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Delivery Type</th>
+                                                <th>Name</th>
+                                                <th>Price (Rs.)</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
                 </div>
                 <!-- /.container-fluid -->
             </div>
@@ -484,7 +515,7 @@
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">
                         Cancel
                     </button>
-                    <a class="btn btn-primary" href="#" onclick="onLogout()">Logout</a>
+                    <a class="btn btn-primary" href="login.html" onclick="onLogout()">Logout</a>
                 </div>
             </div>
         </div>
@@ -501,6 +532,9 @@
         <script src="./assets/js/sb-admin-2.js"></script>
         <script src="./assets/js/app.js"></script>
         <script src="./assets/js/scripts.js"></script>
+        <!-- Page level plugins -->
+        <script src="./vendor/datatables/jquery.dataTables.min.js"></script>
+        <script src="./vendor/datatables/dataTables.bootstrap4.min.js"></script>
     </footer>
 </body>
 

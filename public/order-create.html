@@ -40,7 +40,7 @@
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
-<body id="page-top" onload="getOrders()">
+<body id="page-top" onload="getCurrentUser()">
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
@@ -56,7 +56,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">HABIB_APP Admin <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -397,8 +397,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="detail">Talha
-                                    Akhter</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="detail">Habib-Ur-Rehman</span>
                                 <img class="img-profile rounded-circle" src="./assets/img/undraw_profile.svg" />
                             </a>
                             <!-- Dropdown - User Information -->
@@ -438,37 +437,62 @@
                     </div>
 
                     <!-- Content Row -->
+
                     <div id="main">
-                        <div class="card shadow mb-4">
+                        <div class="card shadow mb-4 mx-auto col-6">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered dataTableOrder" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Category</th>
-                                                <th>Delivery Type</th>
-                                                <th>Name</th>
-                                                <th>Price (Rs.)</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Category</th>
-                                                <th>Delivery Type</th>
-                                                <th>Name</th>
-                                                <th>Price (Rs.)</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            
-                                        </tbody>
-                                    </table>
+                                <div id="alert-response" class="alert" role="alert">
                                 </div>
+                                <form class="orders" onsubmit="return false">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="rounded form-control form-control-user" id="name"
+                                            aria-describedby="emailHelp" placeholder="Enter Order Name...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="price">Price</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Rs.</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="price" placeholder="Enter Price...">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="category">Category</label>
+                                        <select class="rounded form-control form-control-user border-ra" id="category"
+                                            aria-describedby="emailHelp" multiple>
+                                            <option selected>...</option>
+                                            <option value="Chowmein">Chowmein</option>
+                                            <option value="Singaporean Rice">Singaporean Rice</option>
+                                            <option value="Chicken Manchurian">Chicken Manchurian</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="delivery_type">Delivery Type</label>
+                                        <select class="rounded form-control form-control-user" id="delivery_type"
+                                        aria-describedby="emailHelp" >
+                                            <option selected>...</option>
+                                            <option value="Free">Free</option>
+                                            <option value="Paid">Paid</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="status">Status</label>
+                                        <select class="rounded form-control form-control-user" id="status"
+                                        aria-describedby="emailHelp" >
+                                            <option selected>...</option>
+                                            <option value="Pending">Pending</option>
+                                            <option value="Accepted">Accepted</option>
+                                            <option value="Delivered">Delivered</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" onClick="orderCreate()">Save</button>
+                                    <hr>
+                                </form>
                             </div>
                         </div>
                     </div>

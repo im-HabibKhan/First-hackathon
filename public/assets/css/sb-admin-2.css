@@ -633,6 +633,9 @@ pre code {
   padding-left: 0;
 }
 
+.col-lg-6{
+  background-color: #f5b7b1;
+}
 .col-1,
 .col-2,
 .col-3,
@@ -708,6 +711,7 @@ pre code {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
+
 
 .col {
   flex-basis: 0;

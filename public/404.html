@@ -28,6 +28,8 @@
     to avoid connecting the SDK to running emulators.
   -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+
     <!-- Custom fonts for this template-->
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
     <link
@@ -37,7 +39,6 @@
     <!-- Custom styles for this template-->
     <link href="./assets/css/sb-admin-2.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top" onload="getCurrentUser()">
@@ -56,7 +57,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">HABIB_APP Admin <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -397,8 +398,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="detail">Talha
-                                    Akhter</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="detail">Habib Ur Rehman</span>
                                 <img class="img-profile rounded-circle" src="./assets/img/undraw_profile.svg" />
                             </a>
                             <!-- Dropdown - User Information -->
@@ -431,69 +431,16 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="mcq-container container-fluid">
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dishes</h1>
+                <div class="container-fluid">
+
+                    <!-- 404 Error Text -->
+                    <div class="text-center">
+                        <div class="error mx-auto" data-text="404">404</div>
+                        <p class="lead text-gray-800 mb-5">Page Not Found</p>
+                        <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
+                        <a href="index.html">&larr; Back to Dashboard</a>
                     </div>
 
-                    <!-- Content Row -->
-
-                    <div id="main">
-                        <div class="card shadow mb-4 mx-auto col-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Dishes</h6>
-                            </div>
-                            <div class="card-body">
-                                <div id="alert-response" class="alert" role="alert">
-                                </div>
-                                <form class="dishes" onsubmit="return false">
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" class="rounded form-control form-control-user" id="name"
-                                            aria-describedby="emailHelp" placeholder="Enter Item Name...">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="price">Price</label>
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">Rs.</div>
-                                            </div>
-                                            <input type="text" class="form-control" id="price" placeholder="Enter Price...">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="category">Category</label>
-                                        <select class="rounded form-control form-control-user" id="category"
-                                            aria-describedby="emailHelp" multiple>
-                                            <option selected>...</option>
-                                            <option value="Chinese">Chinese</option>
-                                            <option value="Continental">Continental</option>
-                                            <option value="Pakistani">Pakistani</option>
-                                            <option value="South Indian">South Indian</option>
-                                            <option value="Fast Food">Fast Food</option>
-                                            <option value="Desert">Desert</option>
-                                            <option value="Desert">Sea Food</option>
-                                            <option value="Desert">Salad</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="delivery_type">Delivery Type</label>
-                                        <select class="rounded form-control form-control-user" id="delivery_type"
-                                        aria-describedby="emailHelp" >
-                                            <option selected>...</option>
-                                            <option value="Free">Free</option>
-                                            <option value="Paid">Paid</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary" onClick="dishCreate()">Save</button>
-                                    <hr>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
                 </div>
                 <!-- /.container-fluid -->
             </div>
@@ -536,7 +483,7 @@
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">
                         Cancel
                     </button>
-                    <a class="btn btn-primary" href="login.html" onclick="onLogout()">Logout</a>
+                    <a class="btn btn-primary" href="#" onclick="onLogout()">Logout</a>
                 </div>
             </div>
         </div>
@@ -553,9 +500,6 @@
         <script src="./assets/js/sb-admin-2.js"></script>
         <script src="./assets/js/app.js"></script>
         <script src="./assets/js/scripts.js"></script>
-        <!-- Page level plugins -->
-        <script src="./vendor/datatables/jquery.dataTables.min.js"></script>
-        <script src="./vendor/datatables/dataTables.bootstrap4.min.js"></script>
     </footer>
 </body>
 

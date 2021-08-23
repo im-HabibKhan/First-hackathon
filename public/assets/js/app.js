@@ -36,9 +36,9 @@ const onLogin = () => {
         "user",
         JSON.stringify({ email: email.value, id: res.user.uid })
       );
-      // setTimeout(function () {
-      //   location.replace(`index.html`);
-      // }, 5000);
+      setTimeout(function () {
+        location.replace(`index.html`);
+      }, 5000);
     })
     .catch((err) => {
       console.log("err=>", err);
